@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "react-router": "^6.3.0",
+    "redux-thunk": "^2.4.1"
+  }
+}
