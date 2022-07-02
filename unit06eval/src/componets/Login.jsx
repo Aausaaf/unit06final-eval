@@ -41,19 +41,21 @@ const fetchs = () => {
 console.log(all)
   return (
     <>
-       <input type="text" value={name} onChange={(e)=>{
+       <div className="logi">
+       <input type="text" value={name} placeholder="Enter User Name" onChange={(e)=>{
           setname(e.target.value)
        }} />
-       <input type="text" value={password} onChange={(e)=>{
+       <input type="text" value={password} placeholder="Enter Password" onChange={(e)=>{
           setpasward(e.target.value)
        }} />
-       <button onClick={()=>{
+       <button className='button' onClick={()=>{
         const tem = {
             email:name,
             password:password
         }
         setall(tem)
        }}>Login</button>
+       </div>
     </>
   )
 }

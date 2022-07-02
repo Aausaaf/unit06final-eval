@@ -1,9 +1,10 @@
 import { useState } from "react"
 import { useEffect } from "react"
 import { useParams } from "react-router"
-
+import { useNavigate } from 'react-router'
 
 const MovieDetails = () => {
+    const naviagte = useNavigate()
     const [data,setdata] = useState({})
     const {id} = useParams()
     console.log(id)
@@ -30,7 +31,28 @@ const MovieDetails = () => {
         <p>release_date : {data.release_date}</p>
         <p>vote_average : {data.vote_average}</p>
         <p>vote_count : {data.vote_count}</p>
-        <button> Book Now </button>
+        <button onClick={()=>{
+            
+         fetch(`http://localhost:8080/moviesBooked`,{
+            method: "POST",
+            body:JSON.stringify({
+                
+                  
+                  
+                    "name": data.title,
+                    "seat": "A4",
+                  
+            })
+            ,
+            headers: {
+              "content-Type": "application/json"
+            }
+              
+          
+          }).then((res)=> res.json()).catch((err)=>{
+            console.log(err)
+          })
+        }}> Book Now </button>
     </div>
    </div>
    </>

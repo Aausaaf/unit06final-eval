@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react'
 import { useState } from 'react'
-import { useSelector,useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router'
+import { useSelector,useDispatch } from 'react-redux'
 import { add } from '../redux/reduxhome/action'
 const Home = () => {
-  const naviagte = useNavigate()
+  const navigate = useNavigate()
   const {dats} = useSelector((store)=>store)
   const dispatch = useDispatch()
   console.log(dats)
@@ -32,7 +32,7 @@ const Home = () => {
            <p>{ele.title}</p>
            <button
            onClick={()=>{
-              naviagte(`/movie/${ele.id}`)
+            navigate(`/movie/${ele.id}`)
            }}>More Details</button>
           </div>
           </>

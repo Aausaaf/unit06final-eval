@@ -125,8 +125,29 @@
     {
       "id": 1,
       "movie_id": 2,
-      "name": "Sam", 
-      "seat": "A2" 
+      "name": "Sam",
+      "seat": "A2"
+    },
+    {
+      "id": 4,
+      "movie_id": 2,
+      "name": "Sam",
+      "seat": "A2"
+    },
+    {
+      "name": "Doctor Strange in the Multiverse of Madness",
+      "seat": "A4",
+      "id": 5
+    },
+    {
+      "name": "Doctor Strange in the Multiverse of Madness",
+      "seat": "A4",
+      "id": 6
+    },
+    {
+      "name": "Doctor Strange in the Multiverse of Madness",
+      "seat": "A4",
+      "id": 7
     }
   ]
 }
